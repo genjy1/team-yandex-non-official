@@ -6,7 +6,7 @@ import ContainerComponent from '@/components/ContainerComponent.vue'
 let data = ref()
 
 onMounted(async () => {
-  data.value = (await getData('players')).data
+  data.value = (await getData('players/cs')).data
 
   console.log(data.value)
 })
@@ -17,12 +17,12 @@ onMounted(async () => {
   <main
     class="bg-[url('@/assets/img/orig.jpg')] bg-center bg-cover bg-no-repeat w-full h-screen bg-black"
   >
-    <ContainerComponent class="flex flex-col h-72 translate-y-1/2">
-      <div class="wrapper bg-white/12 p-20 rounded-xl">
+    <ContainerComponent class="flex flex-col translate-y-1/2">
+      <div class="wrapper bg-black/35 px-10 py-20 sm:p-20 rounded-xl backdrop-blur">
         <h1 class="text-white text-center font-bold text-2xl py-10">
           Яндекс запускает бренд Team Yandex для развития киберспортивных проектов
         </h1>
-        <div class="btn-wrapper w-4/5 pt-20 pb-40 mx-auto my-0 flex">
+        <div class="btn-wrapper w-4/5 sm:pt-20 sm:pb-40 mx-auto my-0 flex">
           <RouterLink class="bg-[#FCE000] rounded px-3.5 py-3 mx-auto block w-max">
             Подробнее
           </RouterLink>
