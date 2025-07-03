@@ -4,12 +4,11 @@
       <div class="logo">
         <RouterLink to="/"><img src="@/assets/img/logo.png" alt="" /></RouterLink>
       </div>
-      <nav>
-        <ul class="nav-list flex justify-between">
+      <nav class="hidden sm:block">
+        <ul class="nav-list flex justify-between gap-8">
           <li class="text-white">Команды</li>
           <li class="text-white">Новости</li>
           <li class="text-white">Магазин</li>
-          <li class="text-white"></li>
         </ul>
       </nav>
     </ContainerComponent>
