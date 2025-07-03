@@ -1,6 +1,6 @@
 <?php
 
-namespace TeamYandex;
+namespace Classes;
 
 class Response
 {

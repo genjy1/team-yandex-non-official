@@ -1,7 +1,8 @@
 <?php
 
-namespace TeamYandex;
+namespace Classes;
 
+use Classes\Response;
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 class Players
