@@ -17,8 +17,14 @@ require_once __DIR__ . '/vendor/autoload.php';
 try {
     $router = new Router();
 
+    $request = $_REQUEST ?? '';
+    $uri = $_SERVER['REQUEST_URI'] ?? '';
+    $path_info = explode(',',$_SERVER['PATH_INFO'], 3);
+
+    echo '[PATH INFO]' . json_encode($path_info);
+
     $router->setApi([
-        'route' => '/api/players',
+        'route' => "/api/players/}",
         'handler' => function() {
             Players::get_players();
         },
