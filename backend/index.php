@@ -19,16 +19,15 @@ try {
 
     $request = $_REQUEST ?? '';
     $uri = $_SERVER['REQUEST_URI'] ?? '';
-    $path_info = explode(',',$_SERVER['PATH_INFO'], 3);
 
-    echo '[PATH INFO]' . json_encode($path_info);
-
-    $router->setApi([
-        'route' => "/api/players/}",
+    $router->addApi([
+        'route' => "/api/players/",
         'handler' => function() {
             Players::get_players();
         },
     ]);
+
+    error_log($_SERVER['REQUEST_URI']);
 
     $handler = $router->getHandler($_SERVER['REQUEST_URI']);
     if ($handler) {

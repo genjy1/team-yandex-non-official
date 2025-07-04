@@ -6,7 +6,7 @@ import ContainerComponent from '@/components/ContainerComponent.vue'
 let data = ref()
 
 onMounted(async () => {
-  data.value = (await getData('players/cs')).data
+  data.value = (await getData('players/dota')).data
 
   console.log(data.value)
 })
@@ -23,7 +23,7 @@ onMounted(async () => {
           Яндекс запускает бренд Team Yandex для развития киберспортивных проектов
         </h1>
         <div class="btn-wrapper w-4/5 sm:pt-20 sm:pb-40 mx-auto my-0 flex">
-          <RouterLink class="bg-[#FCE000] rounded px-3.5 py-3 mx-auto block w-max">
+          <RouterLink to="/" class="bg-[#FCE000] rounded px-3.5 py-3 mx-auto block w-max">
             Подробнее
           </RouterLink>
         </div>

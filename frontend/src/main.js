@@ -11,7 +11,7 @@ import router from './router'
 const app = createApp(App)
 
 export const getData = async (endpoint) => {
-  let response = await axios.get('http://localhost:8000/api/' + endpoint)
+  let response = await axios.get('http://localhost:8080/api/' + endpoint)
 
   return {
     data: response.data,
